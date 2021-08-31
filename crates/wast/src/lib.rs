@@ -45,13 +45,14 @@
 //! [`Parse`]: parser::Parse
 //! [`LexError`]: lexer::LexError
 
-#![deny(missing_docs, broken_intra_doc_links)]
+#![deny(broken_intra_doc_links)]
 
 use std::fmt;
 use std::path::{Path, PathBuf};
 
 #[cfg(feature = "wasm-module")]
 mod binary;
+pub use self::binary::Encode;
 #[cfg(feature = "wasm-module")]
 mod resolve;
 

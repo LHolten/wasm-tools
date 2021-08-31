@@ -175,7 +175,7 @@ impl Encoder<'_> {
     }
 }
 
-pub(crate) trait Encode {
+pub trait Encode {
     fn encode(&self, e: &mut Vec<u8>);
 }
 
